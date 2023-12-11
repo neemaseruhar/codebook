@@ -9,7 +9,9 @@ export const ProductsList = () => {
   const {products,initialProductList} = useFilter();
   const [show,setShow] = useState(false)
   const search =useLocation().search;
+  console.log(search)
   const searchTerm = new URLSearchParams(search).get('q')
+  console.log(searchTerm)
 
   useEffect(()=> {
     async function displayProducts(){
@@ -21,8 +23,8 @@ export const ProductsList = () => {
 },[searchTerm])
 
   return (
-  <main>
-    <section className="my-5">
+  <main >
+    <section className="my-5 ">
       <div className="my-5 flex justify-between">
         <span className="text-2xl font-semibold dark:text-slate-100 mb-5">All eBooks ({products.length})</span>
         <span>

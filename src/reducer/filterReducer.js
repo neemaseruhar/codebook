@@ -6,19 +6,24 @@ export const filterReducer = (state,action) => {
             return {productList:payload.products}
 
         case "SORT_BY":
-            return
+            return {...state,sortBy:payload.sortBy}
 
         case "RATING":
-            return 
+            return {...state,ratings:payload.ratings}
 
         case "ONLY_IN_STOCK":
-            return
+            return {...state,onlyInStock:payload.onlyInStock}
 
         case "BEST_SELLER":
-            return
+            return {...state,bestSeller:payload.bestSeller}
 
         case "CLEAR_FILTER":
-            return
+            return {...state,
+                onlyInStock: false,
+                bestSeller:false,
+                ratings: null,
+                sortBy: null
+            }
 
         default :
             throw new Error ('invalid case ')
