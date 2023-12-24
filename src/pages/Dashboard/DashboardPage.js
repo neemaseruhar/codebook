@@ -35,8 +35,8 @@ export const DashboardPage = () => {
     </section>
 
     <section>
-      { !orders.length && <DashboardEmpty /> }
-    </section>
+        { !orders.length && <DashboardEmpty /> }
+      </section>
 
   </main>
     
